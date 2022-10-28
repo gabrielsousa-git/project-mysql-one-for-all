@@ -42,7 +42,7 @@ DROP DATABASE IF EXISTS SpotifyClone;
     FOREIGN KEY (artist_id) REFERENCES SpotifyClone.artists(artist_id)
   ) engine = InnoDB;
 
-  CREATE TABLE SpotifyClone.history(
+  CREATE TABLE SpotifyClone.historic(
     user_id INT NOT NULL,
     song_id INT NOT NULL,
     listened_date DATETIME NOT NULL,
@@ -112,7 +112,7 @@ DROP DATABASE IF EXISTS SpotifyClone;
     ('The Bard’s Song', 7,	5,	244),
     ('Feeling Good', 8,	6,	100);
 
-  INSERT INTO SpotifyClone.history (user_id, song_id, listened_date)
+  INSERT INTO SpotifyClone.historic (user_id, song_id, listened_date)
   VALUES
     (1,	8, "2022-02-28 10:45:55"),
     (1,	2, "2020-05-02 05:30:35"),
